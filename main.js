@@ -4,7 +4,6 @@ const path = require('path')
 
 let win 
  
-
 function createWindow() { 
    win = new BrowserWindow({width: 800, height: 600}) 
    win.loadURL(url.format ({ 
@@ -20,3 +19,8 @@ app.on('window-all-closed', () => {
    app.quit();
  });
 
+app.on('activate', () => {
+   if (BrowserWindow.getAllWindows().length === 0) {
+     createWindow()
+   }
+ })

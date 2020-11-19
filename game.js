@@ -1,5 +1,4 @@
 var board;
-var fps = 100;
 const human = 'O';
 const ai = 'X';
 const combos = [
@@ -12,8 +11,9 @@ const combos = [
     [0, 4, 8],
     [6, 4, 2]
 ]
-
 const cells = document.querySelectorAll('.kotak');
+
+
 startGame();
 
 function startGame() {
@@ -75,10 +75,6 @@ function emptySquare() {
     return board.filter(s => typeof s == 'number');
 }
 
-function bestSpot() {    
-    return minimax(board, ai).index;
-}
-
 function checkTie() {
     if (emptySquare().length == 0) {
         for ( var i = 0 ; i < cells.length; i++){
@@ -89,6 +85,10 @@ function checkTie() {
         return true;        
     }
     return false;
+}
+
+function bestSpot() {    
+    return minimax(board, ai).index;
 }
 
 function minimax(newBoard, player) {
