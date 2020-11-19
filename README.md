@@ -5,3 +5,5 @@ how to use:
 3. run via command promt or powershell "electron ./main.js" or npm start
 
 ![tictactoe](https://github.com/MAdeRyan/tic-tac-toe/blob/main/img/tictactoe.PNG?raw=true)
+![draw](https://github.com/MAdeRyan/tic-tac-toe/blob/main/img/draw.PNG?raw=true)
+![lose](https://github.com/MAdeRyan/tic-tac-toe/blob/main/img/lose.PNG?raw=true)
